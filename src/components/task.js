@@ -6,7 +6,7 @@ import {
 	createDisablerButton,
 } from "../utils/domUtils";
 import { Task } from "../objects/Task";
-import check from "../images/check.svg";
+
 import audio from "../audio/task2.wav";
 
 export function task(data) {
@@ -40,7 +40,7 @@ export function task(data) {
 		taskButton.classList = "complete-button";
 
 		const completeSvg = document.createElement("img");
-		completeSvg.src = check;
+		completeSvg.classList.add("material-icons"); completeSvg.textContent = "check_circle";
 		completeSvg.classList = "complete-svg not-display";
 
 		taskButton.appendChild(completeSvg);

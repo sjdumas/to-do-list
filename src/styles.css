@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css");
 
 :root {
@@ -6,9 +7,10 @@
 		"Open Sans", "Helvetica Neue", sans-serif;
 	--font-family-icons: "FontAwesome";
 	--primary-color: #f2f5f7;
-	--secondary-color: var(--simply-white);
-	--dark-color: #2d2d2d;
+	--secondary-color: #f9f9f9;
+	--dark-color: #e0e0e0;
 	--simply-white: #ffffff;
+	--basic-black: #000000;
 	--accent-color: #4f91fb;
 	--accent-hover-color: #649fff;
 	--text-color: #2d2d2d;
@@ -36,6 +38,8 @@ body {
 	display: flex;
 	overflow: hidden;
 	font-family: var(--font-family-base);
+	background-color: var(--primary-color);
+	color: var(--text-color);
 }
 
 img,
@@ -54,6 +58,39 @@ select {
 	font: inherit;
 }
 
+input[type="text"],
+textarea {
+	background-color: var(--simply-white);
+	color: var(--text-color);
+	padding: 8px;
+	border-radius: 5px;
+	width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+	border: 1px solid var(--accent-color);
+}
+
+button {
+	background-color: var(--accent-color);
+	color: var(--simply-white);
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--accent-hover-color);
+}
+
+button:focus,
+input:focus {
+	outline: 2px solid var(--accent-color);
+	outline-offset: 2px;
+}
+
 h1,
 h2,
 h3,
@@ -67,6 +104,33 @@ p {
 ul {
 	list-style: none;
 	padding: 0;
+}
+
+.material-icons {
+    font-size: 24px;
+    vertical-align: middle;
+    color: inherit;
+}
+
+.trash-button .material-icons {
+    font-size: 20px;
+    color: var(--color-red-dark);
+}
+
+.complete-button .material-icons {
+    font-size: 18px;
+    color: var(--color-blue-light);
+}
+
+.user .material-icons {
+    font-size: inherit;
+    color: var(--text-color);
+}
+
+button .material-icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lateral-menu {
@@ -120,7 +184,7 @@ ul {
 .myprojects-element:hover,
 .myprojects-icons button:hover,
 .arrow-left-button:hover {
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: var(--accent-hover-color);
 }
 
 .arrow-left-button.rotate:hover {
@@ -264,6 +328,7 @@ main {
 .done-project-button:hover,
 .name-submit:hover {
 	background-color: var(--accent-hover-color);
+	color: var(--text-color);
 }
 
 .cancel-edit:hover,
@@ -277,14 +342,13 @@ main {
 .main-add-task-button-send:disabled,
 .done-project-button:disabled,
 .name-submit:disabled {
-	border: 1px solid var(--color-gray-medium);
-	background-color: var(--color-gray-light);
-	color: var(--color-gray-dark);
+	background-color: var(--accent-color);
+	color: var(--text-color);
 	cursor: not-allowed;
 }
 
 .main-add-task-button-send:hover {
-	background-color: #a3ff8ce4;
+	background-color: var(--accent-hover-color);
 }
 
 .myprojects-menu {
@@ -415,8 +479,8 @@ main {
 .today-button {
 	width: 100%;
 	border: none;
-	background-color: #3a3a3a;
-	color: #cdcdcd;
+	background-color: var(--accent-color);
+	color: var(--simply-white);
 	border-radius: 5px;
 	font-weight: 600;
 	padding: 8px 10px;
@@ -445,15 +509,15 @@ main {
 }
 
 .main-add-task {
-	background-color: #252525;
+	background-color: var(--primary-color);
 	border: none;
-	color: #cdcdcd;
-	font-weight: 600;
+	color: var(--text-color);
+	font-weight: 500;
 	border-radius: 5px;
-	padding: 3px;
+	padding: 5px;
 	display: flex;
 	align-items: center;
-	gap: 5px;
+	gap: 15px;
 	cursor: pointer;
 }
 
@@ -466,32 +530,32 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-self: center;
-	width: 330px;
+	width: 350px;
 	gap: 10px;
-	background-color: #252525;
+	background-color: var(--primary-color);
 	color: #cdcdcd;
-	border-radius: 10px;
+	border-radius: 5px;
 	/* box-shadow: 3px 3px 15px black; */
-	border: 1px solid #a4a4a485;
+	border: 1px solid var(--color-gray-light);
 }
 
-.title-input {
+/* .title-input {
 	font-weight: bold;
 	color: white;
-}
+} */
 
-.description-input {
+/* .description-input {
 	font-size: 0.8rem;
 	color: #cdcdcd;
-}
+} */
 
 .title-input,
 .description-input {
-	background-color: #252525;
 	border: none;
 	outline: none;
 	resize: none;
 	overflow: hidden;
+	margin: .25rem 0;
 }
 
 .general-task-priority,
@@ -499,16 +563,17 @@ main {
 .date-main-add-task,
 .select-main-add-task {
 	font-family: "FontAwesome", "Inter";
-	width: 85px;
+	width: 50%;
 	height: 30px;
-	background-color: #2d2d2d;
-	border: 1px solid #a4a4a4;
+	background-color: var(--simply-white);
+	border: 1px solid var(--color-gray-light);
 	border-radius: 5px;
-	color: #cdcdcd;
+	color: var(--text-color);
 	outline: none;
 	cursor: pointer;
 	font-size: 0.8rem;
 }
+
 .general-task-date,
 .date-main-add-task {
 	width: 110px;
@@ -523,8 +588,6 @@ main {
 	padding: 5px;
 	border-radius: 5px;
 	cursor: pointer;
-	width: 30px;
-	height: 30px;
 }
 
 .main-add-task-button-send {
@@ -541,18 +604,18 @@ main {
 	width: 230px;
 	min-height: 70px;
 	height: auto;
-	border: 1px solid #a4a4a485;
+	border: 1px solid var(--color-gray-light);
+	color: var(--text-color);
 	border-radius: 5px;
-	background-color: #333333;
-	box-shadow: 2px 2px 5px black;
+	background-color: var(--simply-white);
 	cursor: pointer;
 	transition: all 0.3s;
 	font-size: 0.9rem;
 }
 
 .task:hover {
-	border: 1px solid white;
-	box-shadow: 3px 3px 15px black;
+	border: 1px solid var(--accent-color);
+	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
 }
 
 .main-tasks-project,
@@ -723,8 +786,8 @@ task-dialog-mark {
 .date-main-add-task:hover,
 .select-main-add-task:hover,
 .general-task-project:hover {
-	color: white;
-	background-color: #3a3a3a;
+	color: var(--text-color);
+	background-color: transparent;
 }
 
 .task-description-edit,

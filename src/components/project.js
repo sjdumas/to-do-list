@@ -5,7 +5,7 @@ import {
 	cleanForm,
 } from "../utils/domUtils";
 import { task } from "./task";
-import trash from "../images/trash.svg";
+
 
 export function project(data) {
 	const taskComponent = task(data);
@@ -98,7 +98,7 @@ export function project(data) {
 		)} trash-button not-display`;
 
 		const trashImg = document.createElement("img");
-		trashImg.src = trash;
+		trashImg.classList.add("material-icons"); trashImg.textContent = "delete";
 
 		trashButton.appendChild(trashImg);
 		numberTasksButtonDiv.appendChild(numberTasksSpan);
