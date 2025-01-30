@@ -77,18 +77,12 @@ button {
 	color: var(--simply-white);
 	border: none;
 	padding: 8px 16px;
-	border-radius: 4px;
+	border-radius: 5px;
 	cursor: pointer;
 }
 
 button:hover {
 	background-color: var(--accent-hover-color);
-}
-
-button:focus,
-input:focus {
-	outline: 2px solid var(--accent-color);
-	outline-offset: 2px;
 }
 
 h1,
@@ -182,8 +176,8 @@ button .material-icons {
 .calendar-button:hover,
 .today-button:hover,
 .myprojects-element:hover,
-.myprojects-icons button:hover,
 .arrow-left-button:hover {
+	color: var(--simply-white);
 	background-color: var(--accent-hover-color);
 }
 
@@ -253,8 +247,8 @@ main {
 }
 
 .general-task {
-	background-color: #2d2d2d;
-	color: #cdcdcd;
+	background-color: var(--primary-color);
+	color: var(--text-color);
 	border-radius: 5px;
 	top: 30%;
 	left: 50%;
@@ -311,8 +305,8 @@ main {
 	background-color: var(--accent-color);
 	color: var(--simply-white);
 	cursor: pointer;
-	font-size: 0.8rem;
-	font-weight: bold;
+	font-size: inherit;
+	font-weight: 500;
 }
 
 .cancel-edit,
@@ -328,7 +322,7 @@ main {
 .done-project-button:hover,
 .name-submit:hover {
 	background-color: var(--accent-hover-color);
-	color: var(--text-color);
+	color: var(--simply-white);
 }
 
 .cancel-edit:hover,
@@ -343,7 +337,7 @@ main {
 .done-project-button:disabled,
 .name-submit:disabled {
 	background-color: var(--accent-color);
-	color: var(--text-color);
+	color: var(--simply-white);
 	cursor: not-allowed;
 }
 
@@ -384,27 +378,22 @@ main {
 }
 
 .red {
-	border: 3px solid darkred;
 	background-color: #fb6b6b;
 }
 
 .blue {
-	border: 3px solid darkblue;
 	background-color: #5858fd;
 }
 
 .orange {
-	border: 3px solid orange;
 	background-color: #fdc058;
 }
 
 .purple {
-	border: 3px solid purple;
 	background-color: #be58fd;
 }
 
 .yellow {
-	border: 3px solid yellow;
 	background-color: #f2fd58;
 }
 
@@ -413,14 +402,18 @@ main {
 	height: 20px;
 }
 
-.myprojects-icons button {
+.myprojects-icons button,
+.arrow-down button {
 	border: none;
-	width: 33px;
 	background-color: transparent;
-	color: #cdcdcd;
+	color: var(--text-color);
 	cursor: pointer;
-	border-radius: 50%;
 	padding: 7px;
+}
+
+.myprojects-icons button:hover,
+.arrow-down button:hover {
+	color: var(--accent-color);
 }
 
 .task-main-info.not-display,
@@ -496,11 +489,12 @@ main {
 }
 
 .num-tasks-in-button {
-	font-weight: 200;
+	font-weight: 300;
 }
 
 .active {
-	background-color: rgba(255, 255, 255, 0.1);
+	color: var(--text-color);
+	background-color: var(--secondary-color);
 }
 
 .number-task {
@@ -771,12 +765,12 @@ task-dialog-mark {
 .general-task-project {
 	width: 110px;
 	height: 30px;
-	font-weight: bold;
+	font-weight: 500;
 	padding: 5px 10px;
-	background-color: #2d2d2d;
+	background-color: var(--simply-white);
 	border: none;
 	border-radius: 5px;
-	color: #cdcdcd;
+	color: var(--text-color);
 	outline: none;
 	cursor: pointer;
 	font-size: 0.8rem;
@@ -807,12 +801,12 @@ task-dialog-mark {
 .task-description-edit,
 .general-task-name,
 .general-description {
-	color: white;
+	color: var(--text-color);
 	outline: none;
 	resize: none;
 	overflow: hidden;
 	border: none;
-	background-color: #2d2d2d;
+	background-color: var(--simply-white);
 }
 
 .task-form-info {

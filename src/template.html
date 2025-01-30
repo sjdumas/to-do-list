@@ -2,36 +2,32 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>Taskify - The Ultimate To-Do List</title>
 	</head>
+
 	<body>
 		<nav class="lateral-menu">
 			<div class="user">
-				<img class="user-icon" src="./images/user.svg" alt="User icon" />
+				<span class="material-icons user-icon">account_circle</span>
 				<p class="user-name">User</p>
 				<button class="arrow-left-button">
 					<span class="material-icons">arrow_back</span>
 				</button>
 			</div>
 			<button class="add-task-general">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					height="20"
-					width="20"
-					viewBox="0 0 512 512"
-				>
-					<path
-						fill="currentColor"
-						d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
-					/>
-				</svg>
-				Add a task
+				<span class="material-icons">add_circle</span>
+				Add Task
 			</button>
 			<ul class="middle-menu">
 				<li>
 					<button class="today-button">
-						<div><span class="material-icons">today</span> Today</div>
+						<div>
+							<span class="material-icons">today</span> Today
+						</div>
 						<div class="num-tasks-in-button today"></div>
 					</button>
 				</li>
@@ -44,7 +40,7 @@
 							<span class="material-icons">add_circle</span>
 						</button>
 						<button class="arrow-down">
-							<img src="./images/arrow-down.svg" alt="" />
+							<span class="material-icons">arrow_drop_down</span>
 						</button>
 					</div>
 				</li>
@@ -60,9 +56,12 @@
 			<div class="main-tasks-today"></div>
 			<div class="main-tasks-project"></div>
 			<button class="main-add-task">
-				<span class="material-icons">add</span>Add a task
+				<span class="material-icons">add</span>Add Task
 			</button>
-			<form class="main-add-task-form not-display" action="">
+			<form
+				class="main-add-task-form not-display"
+				action=""
+			>
 				<div class="main-add-task-inputs">
 					<textarea
 						class="title-input"
@@ -88,38 +87,46 @@
 					name="priority"
 					id="priority"
 				>
-					<option value="" disabled selected>&#xf024; Priority</option>
+					<option
+						value=""
+						disabled
+						selected
+					>
+						&#xf024; Priority
+					</option>
 					<option value="high">High</option>
 					<option value="medium">Medium</option>
 					<option value="low">Low</option>
 				</select>
-				<input type="date" class="date-main-add-task not-display" />
+				<input
+					type="date"
+					class="date-main-add-task not-display"
+				/>
 				<div class="main-add-task-buttons">
-					<button type="button" class="main-add-task-button-cross">
+					<button
+						type="button"
+						class="main-add-task-button-cross"
+					>
 						<span class="material-icons">close</span>
 					</button>
-					<button type="submit" class="main-add-task-button-send" disabled>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							height="20"
-							width="20"
-							viewBox="0 0 512 512"
-						>
-							<path
-								fill="currentColor"
-								d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480l0-83.6c0-4 1.5-7.8 4.2-10.8L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"
-							/>
-						</svg>
+					<button
+						type="submit"
+						class="main-add-task-button-send"
+						disabled
+					>
+						<span class="material-icons">send</span>
 					</button>
 				</div>
 			</form>
 		</main>
 		<dialog class="name-dialog">
-			<form class="name-form" action="">
+			<form
+				class="name-form"
+				action=""
+			>
 				<div class="name-div">
 					<label for="name"
-						>Please enter your name to personalize your task management
-						experience</label
+						>Please enter your name</label
 					>
 					<input
 						class="name-input"
@@ -130,28 +137,49 @@
 						maxlength="15"
 					/>
 				</div>
-				<button class="name-submit" type="submit" disabled>Submit</button>
+				<button
+					class="name-submit"
+					type="submit"
+					disabled
+				>
+					Submit
+				</button>
 			</form>
 		</dialog>
 		<dialog class="project-creation-dialog">
-			<form class="project-creation-form" action="">
-				<p class="project-creation-title">Create project</p>
+			<form
+				class="project-creation-form"
+				action=""
+			>
+				<p class="project-creation-title">Create Project</p>
 				<div class="separator"></div>
 				<div class="project-creation-form-element">
-					<label class="project-creation-label" for="project">Name</label>
+					<label
+						class="project-creation-label"
+						for="project"
+						>Name</label
+					>
 					<input
 						class="project-input"
 						type="text"
 						id="project"
 						for="project"
-						placeholder="Enter name"
+						placeholder="Enter project name"
 						maxlength="20"
 					/>
 					<div class="project-input-count">0/20</div>
 				</div>
 				<div class="project-creation-form-element">
-					<label class="project-creation-label" for="colors">Color</label>
-					<select class="colors-select" name="colors" id="colors">
+					<label
+						class="project-creation-label"
+						for="colors"
+						>Color</label
+					>
+					<select
+						class="colors-select"
+						name="colors"
+						id="colors"
+					>
 						<option value="red">🔴 Red</option>
 						<option value="blue">🔵 Blue</option>
 						<option value="yellow">🟡 Yellow</option>
@@ -161,35 +189,11 @@
 				</div>
 				<div class="project-creation-buttons">
 					<button class="cancel-project-button">Cancel</button>
-					<button type="submit" class="done-project-button" disabled>
-						Done
-					</button>
-				</div>
-			</form>
-		</dialog>
-		<dialog>
-			<form class="project-creation-form" action="">
-				<p class="project-creation-title">Create project</p>
-				<div class="separator"></div>
-				<div class="project-creation-form-element">
-					<label class="project-creation-label" for="project">Name</label>
-					<input
-						class="project-input"
-						type="text"
-						id="project"
-						for="project"
-						placeholder="Enter name"
-						maxlength="20"
-					/>
-					<div class="project-input-count">0/20</div>
-				</div>
-				<div class="project-creation-form-element">
-					<label class="project-creation-label" for="colors">Color</label>
-					<select class="colors-select" name="colors" id="colors"></select>
-				</div>
-				<div class="project-creation-buttons">
-					<button type="button" class="cancel-project-button">Cancel</button>
-					<button type="submit" class="done-project-button" disabled>
+					<button
+						type="submit"
+						class="done-project-button"
+						disabled
+					>
 						Done
 					</button>
 				</div>
@@ -201,20 +205,10 @@
 					<h4 class="task-parent"></h4>
 					<div class="task-buttons">
 						<button class="task-dialog-trash">
-							<img src="./images/trash.svg" alt="" />
+							<span class="material-icons">delete</span>
 						</button>
 						<button class="task-dialog-mark">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								height="20"
-								width="20"
-								viewBox="0 0 384 512"
-							>
-								<path
-									fill="currentColor"
-									d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-								/>
-							</svg>
+							<span class="material-icons">close</span>
 						</button>
 					</div>
 				</header>
@@ -223,12 +217,17 @@
 					<div class="task-main-info">
 						<h2 class="task-title"></h2>
 						<div class="task-subdiv">
-							<span class="material-icons">format_align_left</span>
+							<span class="material-icons"
+								>format_align_left</span
+							>
 							<p class="task-description"></p>
 						</div>
 					</div>
 					<div class="task-form-info not-display">
-						<form class="task-form-edit" action="">
+						<form
+							class="task-form-edit"
+							action=""
+						>
 							<textarea
 								class="task-title-edit"
 								name="task-title"
@@ -245,8 +244,18 @@
 								placeholder="Description"
 							></textarea>
 							<div class="edit-buttons">
-								<button class="cancel-edit" type="button">Cancel</button>
-								<button class="save-edit" type="submit">Save</button>
+								<button
+									class="cancel-edit"
+									type="button"
+								>
+									Cancel
+								</button>
+								<button
+									class="save-edit"
+									type="submit"
+								>
+									Save
+								</button>
 							</div>
 						</form>
 					</div>
@@ -271,7 +280,10 @@
 			<p>Task completed!</p>
 		</div>
 		<dialog class="general-task">
-			<form class="general-task-form" action="">
+			<form
+				class="general-task-form"
+				action=""
+			>
 				<div class="general-top-task">
 					<div class="general-top-first">
 						<textarea
@@ -294,14 +306,23 @@
 						></textarea>
 					</div>
 					<div class="general-top-second">
-						<input type="date" class="general-task-date" />
+						<input
+							type="date"
+							class="general-task-date"
+						/>
 						<select
 							class="general-task-priority"
 							required
 							name="priority"
 							id="priority"
 						>
-							<option value="" disabled selected>&#xf024; Priority</option>
+							<option
+								value=""
+								disabled
+								selected
+							>
+								&#xf024; Priority
+							</option>
 							<option value="high">High</option>
 							<option value="medium">Medium</option>
 							<option value="low">Low</option>
@@ -317,8 +338,11 @@
 					></select>
 					<div class="general-buttons">
 						<button class="cancel-general-button">Cancel</button>
-						<button type="submit" class="add-task-form-general">
-							Add task
+						<button
+							type="submit"
+							class="add-task-form-general"
+						>
+							Add Task
 						</button>
 					</div>
 				</div>
