@@ -6,7 +6,6 @@ import {
 } from "../utils/domUtils";
 import { task } from "./task";
 
-
 export function project(data) {
 	const taskComponent = task(data);
 
@@ -97,10 +96,12 @@ export function project(data) {
 			""
 		)} trash-button not-display`;
 
-		const trashImg = document.createElement("img");
-		trashImg.classList.add("material-icons"); trashImg.textContent = "delete";
+		// Use a <span> for the Material Icon
+		const trashIcon = document.createElement("span");
+		trashIcon.classList.add("material-icons");
+		trashIcon.textContent = "delete"; // Set the icon name
 
-		trashButton.appendChild(trashImg);
+		trashButton.appendChild(trashIcon); // Append the icon to the button
 		numberTasksButtonDiv.appendChild(numberTasksSpan);
 		numberTasksButtonDiv.appendChild(trashButton);
 
@@ -115,16 +116,19 @@ export function project(data) {
 		projectLi.addEventListener("click", showProjectElement);
 
 		if (projectName !== "My Tasks") {
+			// Add hover event listeners only once
 			projectLi.addEventListener("mouseenter", () => {
 				trashButton.classList.remove("not-display");
 				numberTasksSpan.classList.add("not-display");
-				trashButton.addEventListener("click", removeProject);
 			});
 
 			projectLi.addEventListener("mouseleave", () => {
 				trashButton.classList.add("not-display");
 				numberTasksSpan.classList.remove("not-display");
 			});
+
+			// Add click event listener for trash button
+			trashButton.addEventListener("click", removeProject);
 		}
 	};
 
